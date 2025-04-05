@@ -1,0 +1,265 @@
+
+.Home {
+    .container {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      height: 90vh;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+  
+      .Home__user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+  
+        .Home__user-info {
+          display: flex;
+          align-items: center;
+  
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+  
+          p {
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+  
+        .calendar {
+          background: #fff;
+          border: none;
+          padding: 8px;
+          border-radius: 50%;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: background 0.3s;
+  
+          &:hover {
+            background-color: #735cd8;
+            cursor: pointer;
+          }
+  
+          svg {
+            font-size: 24px;
+            color: #735cd8;
+          }
+        }
+      }
+  
+      .drawer-price {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        
+        p {
+          font-size: 14px;
+          color: #888;
+        }
+  
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+  
+      .drawer-content {
+        .drawer-content__cards {
+          margin-top: 20px;
+  
+          .drawer-content__cards-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+  
+            h4 {
+              font-size: 16px;
+              font-weight: bold;
+            }
+  
+            p {
+              font-size: 14px;
+              color: #888;
+            }
+          }
+        }
+      }
+  
+      .prices {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        background-color: #4caf50;
+        width: 100%;
+        height: 120px;
+        border-radius: 20px;
+        padding: 50px;
+        color: white;
+  
+        .prices-item {
+          h3 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+  
+          p {
+            font-size: 14px;
+            color: #fff;
+          }
+        }
+  
+        .toggle-btn {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          svg {
+            font-size: 20px;
+            color: #fff;
+          }
+        }
+      }
+  
+      .cards {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+  
+        .cards-item {
+          background: #f8f8f8;
+          padding: 15px;
+          border-radius: 8px;
+          width: 48%;
+          text-align: center;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  
+          h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+  
+          .cards-item__amount {
+            font-size: 22px;
+            font-weight: bold;
+            color: #735cd8;
+          }
+  
+          .cards-item__amount2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff4d4f;
+          }
+        }
+      }
+  
+      .Home__wallet {
+        .Home__wallet-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+          padding: 20px;
+  
+          .wallet {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+  
+            .wallet-icon {
+              background-color: #735cd8;
+              border-radius: 50%;
+              padding: 10px;
+              margin-right: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              svg {
+                font-size: 24px;
+                color: white;
+              }
+            }
+  
+            .wallet-amount {
+              p {
+                font-size: 14px;
+                color: #888;
+              }
+  
+              h3 {
+                font-size: 20px;
+                font-weight: bold;
+              }
+            }
+          }
+  
+          .wallet-btn {
+            background: #735cd8;
+            padding: 10px;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            svg {
+              font-size: 24px;
+              color: #fff;
+            }
+  
+            &:hover {
+              background: #5a2d9b;
+              cursor: pointer;
+            }
+          }
+        }
+  
+        .Home__wallet-history {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           padding: 0px 20px;
+          
+          p {
+            font-size: 14px;
+            color: #888;
+          }
+  
+          h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4caf50;
+          }
+        }
+      }
+  
+      .drawer {
+        .MuiPickersCalendarHeader-root {
+          background-color: #735cd8;
+          color: #fff;
+        }
+  
+        .MuiDayPicker-weekDayLabel {
+          font-size: 14px;
+        }
+  
+        .MuiDayPicker-day {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  
