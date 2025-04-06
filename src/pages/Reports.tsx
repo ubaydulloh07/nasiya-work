@@ -1,7 +1,9 @@
 
 function Reports() {
   return (
-    <div>Reports</div>
+    <div className="Reports__container">
+      <img  className="img-reports"  src="./reports.png" alt="" />
+    </div>
   )
 }
 

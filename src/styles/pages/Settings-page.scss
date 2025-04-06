@@ -1,0 +1,298 @@
+.settings-subpage {
+    padding: 0;
+    margin: 0 auto !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  
+  
+
+
+
+    
+    .subpage-container {
+      max-width: 700px !important;
+      margin: 0 auto !important;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 20px;
+      padding-bottom: 80px;
+       /* Add space for bottom navigation */
+    }
+  
+    .subpage-header {
+      display: flex;
+      align-items: center;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+  
+      .back-button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 16px;
+        
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+  
+      .subpage-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+  
+    // Profile section styles (for PersonalInfo)
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+  
+  
+      .avatar-container {
+        position: relative;
+        margin-bottom: 16px;
+  
+        .avatar {
+          border: 2px solid #fff;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+  
+        .camera-icon {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 24px;
+          height: 24px;
+          background-color: #3478F7;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+  
+      .user-name {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+  
+    .form-section {
+      margin-bottom: 30px;
+  
+      .form-group {
+        margin-bottom: 20px;
+  
+        label {
+          display: block;
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  
+    .social-section {
+      margin-bottom: 30px;
+  
+      .social-title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+  
+      .social-links {
+        display: flex;
+        gap: 16px;
+  
+        .social-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 80px;
+          cursor: pointer;
+  
+          .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 8px;
+          }
+  
+          .social-text {
+            font-size: 12px;
+          }
+  
+          &.instagram .social-icon {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+          }
+  
+          &.telegram .social-icon {
+            background-color: #0088cc;
+          }
+  
+          &.phone .social-icon {
+            background-color: #4CAF50;
+          }
+        }
+      }
+    }
+  
+    .save-button {
+      margin-top: auto;
+      height: 48px;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: #3478F7;
+      border-radius: 8px;
+    }
+  
+    // Help page styles
+    .help-content {
+      .help-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+  
+      .help-description {
+        color: #666;
+        margin-bottom: 24px;
+      }
+  
+      .contact-methods {
+        margin-bottom: 30px;
+  
+        .contact-method {
+          margin-bottom: 16px;
+  
+          .method-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 4px;
+          }
+  
+          .method-value {
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  
+    .faq-section {
+      .faq-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+  
+      .faq-item {
+        margin-bottom: 20px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  
+        .faq-question {
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+  
+        .faq-answer {
+          color: #666;
+          font-size: 14px;
+        }
+      }
+    }
+  
+    // Feedback page styles
+    .feedback-content {
+      .feedback-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+  
+      .feedback-description {
+        color: #666;
+        margin-bottom: 24px;
+      }
+  
+      .feedback-form {
+        .feedback-input {
+          border-radius: 8px;
+          margin-bottom: 20px;
+          resize: none;
+        }
+  
+        .submit-button {
+          height: 48px;
+          font-size: 16px;
+          font-weight: 500;
+          background-color: #3478F7;
+          border-radius: 8px;
+        }
+      }
+    }
+  
+    // About page styles
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+  
+      .app-logo-container {
+        margin-bottom: 16px;
+      }
+  
+      .app-name {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+  
+      .app-version {
+        color: #666;
+        margin-bottom: 30px;
+      }
+  
+      .app-description {
+        text-align: left;
+        margin-bottom: 40px;
+        
+        p {
+          margin-bottom: 16px;
+          color: #666;
+          line-height: 1.5;
+        }
+      }
+  
+      .copyright {
+        color: #999;
+        font-size: 12px;
+      }
+    }
+  } 

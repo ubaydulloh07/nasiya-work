@@ -204,11 +204,7 @@ const LoginForm = () => {
                         </button>
                     </form>
 
-                    <p className='Switch'>
-                        Hisobingiz yo'q bo'lsa, tizimga kirish huquqini olish uchun
-                        <button className="adminLink"> do'kon administratori </button>
-                        bilan bog'laning.
-                    </p>
+                   
                 </div>
             </div>
 
@@ -222,6 +218,9 @@ const LoginForm = () => {
             >
                 <p>Iltimos, {timeLeft} keyin qayta urinib ko'ring.</p>
             </Modal>
+
+
+            <img className="login-img" src="./login-img.png" alt="" />
         </div>
     );
 };

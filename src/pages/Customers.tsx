@@ -37,6 +37,10 @@ const Customers = () => {
   }, []);
   
   return (
+    <div className="customers-page">
+
+      <div>
+
     <section className="customers">
       <div className="container">
         <div className="customers__search">
@@ -104,6 +108,12 @@ const Customers = () => {
 
      
     </section>
+      </div>
+<div>
+
+        <img className="home-img" src="https://as2.ftcdn.net/v2/jpg/02/05/21/39/1000_F_205213902_GwDB7l4o3lGVnu1zdbAHgZlIUN7hTI2Z.jpg" alt="" />
+</div>
+    </div>
   );
 };
 

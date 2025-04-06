@@ -97,6 +97,7 @@ const CustomerDetail = () => {
     };
 
     return (
+        <div className="CustomerDetail__container">
         <div className="CustomerDetail">
             <div className="container">
                 {loading || debtsLoading || debtorLoading ? (
@@ -182,6 +183,12 @@ const CustomerDetail = () => {
                     </div>
                 )}
             </div>
+        </div>
+
+        <div>
+            <img className="CustomerDetail__img" src="https://media.istockphoto.com/id/1388108025/vector/contactless-customer-payment-to-grocery-shop-cashier.jpg?s=612x612&w=0&k=20&c=xm_MasxuaP4kzcyG1cj7B1zjteWdrhuda8o2Xs2Ze0g=" alt="" />
+        </div>
+
         </div>
     );
 };

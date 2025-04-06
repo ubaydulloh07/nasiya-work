@@ -3,6 +3,8 @@ import { Toaster } from "sonner"
 import AppRoutes from "./router"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import './index.css'
+import { Spin } from "antd"
+import { LoadingOutlined } from "@ant-design/icons"
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -24,7 +26,7 @@ function App() {
   if (loading) {
     return (
       <div className="loading-container">
-        <img src="/imgs/LOGO.svg" alt="" className="loading-logo" />
+        <Spin indicator={<LoadingOutlined style={{ fontSize: 48 }} spin />} />
       </div>
     );
   }

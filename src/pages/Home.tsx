@@ -31,6 +31,9 @@ function Home() {
 
     return (
         <div className="Home">
+
+            <div>
+
             <div className="container">
                 <div className="Home__user">
                     <div className="Home__user-info">
@@ -138,6 +141,13 @@ function Home() {
                     </div>
                 </div>
             </div>
+            </div>
+
+            <div>
+            <img className="home-img" src="https://media.istockphoto.com/id/487123799/vector/shopping-mall.jpg?s=612x612&w=0&k=20&c=j4hGp2jsA28OLHc9U58zwb7NgI9cF_qx2toc4GLp6l0=" alt="" />
+
+            </div>
+
         </div>
     );
 }
