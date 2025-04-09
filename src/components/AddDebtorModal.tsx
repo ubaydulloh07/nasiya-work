@@ -131,13 +131,13 @@ const AddDebtorModal: React.FC<AddDebtorModalProps> = ({ isOpen, onClose, onAddD
 
   return (
     <Modal title="Qarzdorni qo'shish" visible={isOpen} onCancel={handleClose} footer={null} width={600} style={{ top: 20 }}>
-      <form onSubmit={handleSubmit} className="add-debtor-form">
-        <div className="add-debtor-form__name">
+      <form onSubmit={handleSubmit} className="modal-form">
+        <div className="modal-form__name">
           <label>Ismi *</label>
           <Input type="text" name="full_name" placeholder="Ismini kiriting" value={formData.full_name} onChange={handleInputChange} required />
         </div>
 
-        <div className="add-debtor-form__phone">
+        <div className="modal-form__phone">
           <label>Telefon raqamlari *</label>
           {formData.phone_numbers.map((phone, index) => (
             <div key={index}>
@@ -154,18 +154,18 @@ const AddDebtorModal: React.FC<AddDebtorModalProps> = ({ isOpen, onClose, onAddD
             </div>
           ))}
           {formData.phone_numbers.length < 4 && (
-            <Button type="dashed" className="add-debtor-form__phone-add" onClick={handleAddPhoneNumber}>
+            <Button type="dashed" className="modal-form__phone-add" onClick={handleAddPhoneNumber}>
               Ko'proq qo'shish
             </Button>
           )}
         </div>
 
-        <div className="add-debtor-form__address">
+        <div className="modal-form__address">
           <label>Yashash manzili</label>
           <Input type="text" name="address" placeholder="Yashash manzilini kiriting" value={formData.address} onChange={handleInputChange} required />
         </div>
 
-        <div className="add-debtor-form__description">
+        <div className="modal-form__description">
           {showDescription ? (
             <div>
               <label>Eslatma</label>
@@ -183,31 +183,31 @@ const AddDebtorModal: React.FC<AddDebtorModalProps> = ({ isOpen, onClose, onAddD
           )}
         </div>
 
-        <div className="add-debtor-form__images">
+        <div className="modal-form__images">
           <label>Rasm biriktirish</label>
-          <div className="image-upload-container">
+          <div className="modal-form__image-container">
             {formData.images.map((image, index) => (
-              <div key={index} className="image-upload-item">
+              <div key={index} className="modal-form__image-item">
                 <Button
                   type="default"
-                  className="image-upload-button"
+                  className="modal-form__image-button"
                 >
                   <Input
                     type="file"
                     accept="image/*"
                     onChange={(e) => handleImageChange(e, index)}
-                    className="image-input"
+                    className="modal-form__image-input"
                   />
                   {!image ? (
-                    <div className="image-placeholder">
-                      <span className="upload-icon"><UploadOutlined /></span> 
-                      <span>Rasm qo‘shish</span>
+                    <div className="modal-form__image-placeholder">
+                      <span className="modal-form__upload-icon"><UploadOutlined /></span> 
+                      <span>Rasm qo'shish</span>
                     </div>
                   ) : (
                     <img
                       src={image}
                       alt={`Preview ${index}`}
-                      className="image-preview"
+                      className="modal-form__image-preview"
                     />
                   )}
                 </Button>
@@ -215,7 +215,7 @@ const AddDebtorModal: React.FC<AddDebtorModalProps> = ({ isOpen, onClose, onAddD
             ))}
           </div>
         </div>
-        <div className="modal-actions">
+        <div className="modal-form__actions">
           <Button type="primary" htmlType="submit" loading={loading}>
             Saqlash
           </Button>

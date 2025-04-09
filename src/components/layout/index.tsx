@@ -1,5 +1,5 @@
 import { Outlet } from "react-router"
-import Header from "./Header"
+import BottomNav from "./BottomNav"
 
 function Layout() {
     return (
@@ -7,8 +7,7 @@ function Layout() {
             <main>
                 <Outlet />
             </main>
-            <Header />
-           
+            <BottomNav />
         </>
     )
 }

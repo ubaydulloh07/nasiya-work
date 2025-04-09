@@ -1,17 +1,16 @@
-.LoginPage {
+.loginContainer {
     width: 100%;
 
-    .loginContainer {
+    .loginbox {
         position: relative;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100vh;
-        }
     }
 
-    .loginbox {
+    .loginForm {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -19,7 +18,6 @@
         width: 45%;
         height: 80%;
         padding: 30px;
-        
         text-align: center;
         border: 2px solid darkblue;
         border-radius: 50px;
@@ -32,7 +30,7 @@
             width: 100%;
         }
 
-        .loginForm {
+        form {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -41,7 +39,7 @@
             margin: 0 auto;
 
             @media (max-width: 840px) {
-               width: 100%;
+                width: 100%;
             }
 
             @media (max-width: 700px) {
@@ -66,14 +64,6 @@
             text-align: start;
         }
 
-        form {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: end;
-        }
-
         .loginLogo {
             width: 50px;
             height: auto;
@@ -82,7 +72,6 @@
             pointer-events: none;
             margin-bottom: 30px;
         }
-
     }
 
     .inputGroup {
@@ -91,7 +80,6 @@
         text-align: start;
         height: 80px;
         margin-bottom: 5px;
-
 
         label {
             display: block;
@@ -119,28 +107,14 @@
             }
         }
 
-        .inputIcon {
-            position: absolute;
-            left: 10px;
-            top: 52%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: #666;
-            width: 20px;
+        .inputError {
+            border-color: #e63946 !important;
         }
 
-        .inputIcon2 {
-            position: absolute;
-            left: 8px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: #666;
-            width: 23px;
+        .errorMessage {
+            font-size: 12px !important;
+            color: #e63946 !important;
+            margin-top: 2px;
         }
     }
 
@@ -163,16 +137,6 @@
             cursor: pointer;
             color: #666;
         }
-    }
-
-    .inputError {
-        border-color: #e63946 !important;
-    }
-
-    .errorMessage {
-        font-size: 12px !important;
-        color: #e63946 !important;
-        margin-top: 2px;
     }
 
     .loginInfo {
@@ -204,44 +168,20 @@
         cursor: pointer;
         transition: background 0.2s;
 
-        &:disabled {
+        &.disabledButton {
             background: #b0c4de;
             cursor: not-allowed;
         }
     }
 
-    .Switch {
+    .login-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         position: absolute;
-        bottom: 0;
-        text-align: start;
-        font-size: 14px !important;
-
-        @media (max-width: 700px) {
-            width: 70%;
-        }
-
-        @media (max-width: 500px) {
-            width: 90%;
-        }
-
-        .adminLink {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            background-color: transparent;
-            margin-right: 5px;
-        }
+        top: 0;
+        left: 0;
+        z-index: -1;
+        filter: blur(2px);
     }
-
-
-.login-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    filter: blur(2px);
-   
 }

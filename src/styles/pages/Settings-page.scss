@@ -1,4 +1,4 @@
-.settings-subpage {
+.page-personal-info {
     padding: 0;
     margin: 0 auto !important;
     height: 100vh;
@@ -10,7 +10,7 @@
 
 
     
-    .subpage-container {
+    .page-personal-info__container {
       max-width: 700px !important;
       margin: 0 auto !important;
       width: 100%;
@@ -23,14 +23,14 @@
        /* Add space for bottom navigation */
     }
   
-    .subpage-header {
+    .page-personal-info__header {
       display: flex;
       align-items: center;
       padding-bottom: 20px;
       margin-bottom: 20px;
       border-bottom: 1px solid #eee;
   
-      .back-button {
+      .page-personal-info__back-button {
         width: 40px;
         height: 40px;
         display: flex;
@@ -44,7 +44,7 @@
         }
       }
   
-      .subpage-title {
+      .page-personal-info__title {
         font-size: 18px;
         font-weight: 600;
         margin: 0;
@@ -52,23 +52,27 @@
     }
   
     // Profile section styles (for PersonalInfo)
-    .profile-section {
+    .page-personal-info__profile {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 30px;
   
   
-      .avatar-container {
+      .page-personal-info__avatar-container {
         position: relative;
         margin-bottom: 16px;
+
   
-        .avatar {
+        .page-personal-info__avatar {
           border: 2px solid #fff;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
         }
   
-        .camera-icon {
+        .page-personal-info__camera-icon {
           position: absolute;
           bottom: 0;
           right: 0;
@@ -85,17 +89,17 @@
         }
       }
   
-      .user-name {
+      .page-personal-info__user-name {
         font-size: 18px;
         font-weight: 600;
         margin: 0;
       }
     }
   
-    .form-section {
+    .page-personal-info__form {
       margin-bottom: 30px;
   
-      .form-group {
+      .page-personal-info__form-group {
         margin-bottom: 20px;
   
         label {
@@ -107,27 +111,27 @@
       }
     }
   
-    .social-section {
+    .page-personal-info__social {
       margin-bottom: 30px;
   
-      .social-title {
+      .page-personal-info__social-title {
         font-size: 16px;
         font-weight: 500;
         margin-bottom: 16px;
       }
   
-      .social-links {
+      .page-personal-info__social-links {
         display: flex;
         gap: 16px;
   
-        .social-item {
+        .page-personal-info__social-item {
           display: flex;
           flex-direction: column;
           align-items: center;
           width: 80px;
           cursor: pointer;
   
-          .social-icon {
+          .page-personal-info__social-icon {
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -139,26 +143,26 @@
             margin-bottom: 8px;
           }
   
-          .social-text {
+          .page-personal-info__social-text {
             font-size: 12px;
           }
   
-          &.instagram .social-icon {
+          &--instagram .page-personal-info__social-icon {
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
           }
   
-          &.telegram .social-icon {
+          &--telegram .page-personal-info__social-icon {
             background-color: #0088cc;
           }
   
-          &.phone .social-icon {
+          &--phone .page-personal-info__social-icon {
             background-color: #4CAF50;
           }
         }
       }
     }
   
-    .save-button {
+    .page-personal-info__save-button {
       margin-top: auto;
       height: 48px;
       font-size: 16px;
@@ -296,3 +300,273 @@
       }
     }
   } 
+
+// Settings page styles
+.settings-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.settings-page__container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.settings-page__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.settings-page__back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+.settings-page__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+// Help page styles
+.help-content {
+  margin-bottom: 30px;
+}
+
+.help-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.help-description {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-method {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.method-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.method-value {
+  color: #666;
+}
+
+.faq-section {
+  margin-top: 30px;
+}
+
+.faq-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.faq-question {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.faq-answer {
+  color: #666;
+  line-height: 1.5;
+}
+
+// Feedback page styles
+.feedback-content {
+  margin-bottom: 30px;
+}
+
+.feedback-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.feedback-description {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feedback-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  resize: vertical;
+  min-height: 150px;
+
+  &:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+}
+
+.submit-button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+// About page styles
+.about-content {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.app-logo-container {
+  margin-bottom: 20px;
+}
+
+.app-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.app-version {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.app-description {
+  text-align: left;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+
+  p {
+    margin-bottom: 15px;
+  }
+}
+
+.copyright {
+  font-size: 14px;
+  color: #999;
+  margin-top: 30px;
+}
+
+// Common styles for all subpages
+.settings-subpage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.subpage-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subpage-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+.subpage-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+} 

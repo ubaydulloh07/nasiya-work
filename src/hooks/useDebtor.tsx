@@ -73,6 +73,22 @@ const useDebtor = () => {
     },
   });
 
+  // Update debtor
+  const updateDebtorMutation = useMutation({
+    mutationFn: async ({ id, data }: { id: string; data: any }) => {
+      const response = await API.put(`/debtor/${id}`, data, {
+        headers: { "Content-Type": "application/json" },
+      });
+      return response.data.data;
+    },
+    onSuccess: (updatedDebtor) => {
+      queryClient.setQueryData(["debtors"], (oldDebtors: Debtor[] = []) => 
+        oldDebtors.map((debtor) => debtor.id === updatedDebtor.id ? updatedDebtor : debtor)
+      );
+      queryClient.setQueryData(["debtor", updatedDebtor.id], updatedDebtor);
+    },
+  });
+
   return { 
     debtors, 
     loading, 
@@ -80,7 +96,8 @@ const useDebtor = () => {
     addDebtor: addDebtorMutation.mutateAsync, 
     refetch: () => queryClient.invalidateQueries({ queryKey: ["debtors"] }),
     getDebtorById,
-    deleteDebtor: deleteDebtorMutation.mutateAsync 
+    deleteDebtor: deleteDebtorMutation.mutateAsync,
+    updateDebtor: updateDebtorMutation.mutateAsync
   };
 };
 

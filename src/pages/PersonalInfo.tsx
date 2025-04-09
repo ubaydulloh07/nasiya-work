@@ -1,8 +1,6 @@
-
 import { Button, Avatar, Input } from 'antd';
 import { ArrowLeftOutlined, CameraOutlined, InstagramOutlined, PhoneOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
-
 
 import "../styles/pages/Settings-page.scss";
 
@@ -21,78 +19,71 @@ const PersonalInfo = () => {
   };
 
   return (
-    <div className="settings-subpage">
-      <div className="subpage-container">
-        <div className="subpage-header">
-          <Button 
-            icon={<ArrowLeftOutlined />} 
-            onClick={handleBack}
-            type="text"
-            className="back-button"
-          />
-          <h1 className="subpage-title">Shaxsiy ma'lumotlar</h1>
+    <div className="page-personal-info">
+      <div className="page-personal-info__container">
+        <div className="page-personal-info__header">
+          <button onClick={handleBack} className="page-personal-info__back-button">
+            <ArrowLeftOutlined />
+          </button>
+          <h1 className="page-personal-info__title">Shaxsiy ma'lumotlar</h1>
         </div>
 
-        <div className="profile-section">
-          <div className="avatar-container">
-            <Avatar 
-              size={80} 
-              src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" 
-              className="avatar"
-            />
-            <div className="camera-icon">
+        <div className="page-personal-info__profile">
+          <div className="page-personal-info__avatar-container">
+            <img src="./avatar.png" alt="User Avatar" className="page-personal-info__avatar" />
+            
+            <div className="page-personal-info__camera-icon">
               <CameraOutlined />
             </div>
           </div>
-          <p className="user-name">User Name</p>
+          <p className="page-personal-info__user-name">User Name</p>
         </div>
 
-        <div className="form-section">
-          <div className="form-group">
+        <div className="page-personal-info__form">
+          <div className="page-personal-info__form-group">
             <label>Ism Familiya</label>
             <Input defaultValue="Test Foydalanuvchi" />
           </div>
 
-          <div className="form-group">
+          <div className="page-personal-info__form-group">
             <label>Telefon raqam</label>
             <Input defaultValue="+998 90 123 45 67" />
           </div>
 
-          <div className="form-group">
+          <div className="page-personal-info__form-group">
             <label>Elektron pochta</label>
             <Input defaultValue="foydalanuvchi@gmail.com" />
           </div>
         </div>
 
-        <div className="social-section">
-          <div className="social-title">Ijtimoiy tarmoqlar</div>
-          <div className="social-links">
-            <div className="social-item instagram">
-              <div className="social-icon">
+        <div className="page-personal-info__social">
+          <div className="page-personal-info__social-title">Ijtimoiy tarmoqlar</div>
+          <div className="page-personal-info__social-links">
+            <div className="page-personal-info__social-item page-personal-info__social-item--instagram">
+              <div className="page-personal-info__social-icon">
                 <InstagramOutlined />
               </div>
-              <div className="social-text">Instagram</div>
+              <div className="page-personal-info__social-text">Instagram</div>
             </div>
-            <div className="social-item telegram">
-              <div className="social-icon">
+            <div className="page-personal-info__social-item page-personal-info__social-item--telegram">
+              <div className="page-personal-info__social-icon">
                 <TelegramIcon />
               </div>
-              <div className="social-text">Telegram</div>
+              <div className="page-personal-info__social-text">Telegram</div>
             </div>
-            <div className="social-item phone">
-              <div className="social-icon">
+            <div className="page-personal-info__social-item page-personal-info__social-item--phone">
+              <div className="page-personal-info__social-icon">
                 <PhoneOutlined />
               </div>
-              <div className="social-text">Phone</div>
+              <div className="page-personal-info__social-text">Phone</div>
             </div>
           </div>
         </div>
 
-        <Button type="primary" className="save-button">
+        <Button type="primary" className="page-personal-info__save-button">
           Saqlash
         </Button>
       </div>
-    
     </div>
   );
 };

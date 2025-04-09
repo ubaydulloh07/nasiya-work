@@ -153,7 +153,13 @@ const DebtDetail = () => {
                     </Dropdown>
                 </div>
             </div>
+            
             <Card className="detail-card">
+
+
+                <div className="date-time-container">
+
+                    <div className="date-container">
                 <label>Sana</label>
                 <DatePicker 
                     defaultValue={debtDate} 
@@ -161,12 +167,21 @@ const DebtDetail = () => {
                     className="full-width" 
                 />
 
+                    </div>
+
+                    <div className="date-container">
+
                 <label>Soat</label>
                 <TimePicker 
                     defaultValue={debtDate} 
                     disabled={!isEditing} 
                     className="full-width" 
                 />
+                    </div>
+
+                
+
+                </div>
 
                 <label>Muddat</label>
                 <Input 

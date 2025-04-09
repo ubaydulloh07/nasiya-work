@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Spin, Alert, Dropdown, Menu, Button, Modal, message } from "antd";
+import { Spin, Alert, Dropdown, Menu, Button, Modal, message, Form, Input } from "antd";
 import { MoreOutlined, ArrowLeftOutlined, PlusOutlined , LoadingOutlined } from '@ant-design/icons';
 import useDebtor from "../hooks/useDebtor";
 import useDebts from "../hooks/UseDebts";
@@ -19,13 +19,15 @@ interface Debt {
 
 const CustomerDetail = () => {
     const { id } = useParams();
-    const { getDebtorById, deleteDebtor } = useDebtor();
+    const { getDebtorById, deleteDebtor, updateDebtor } = useDebtor();
     const { debts, loading: debtsLoading, error: debtsError, createDebt } = useDebts(id!); 
     const [customer, setCustomer] = useState<any>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [error] = useState<string | null>(null);
     const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [form] = Form.useForm();
 
     const { data: debtorData, isLoading: debtorLoading } = getDebtorById(id || "");
 
@@ -45,13 +47,29 @@ const CustomerDetail = () => {
     };
 
     const handleEdit = () => {
-        console.log("Edit customer");
+        setIsEditModalOpen(true);
+        form.setFieldsValue({
+            full_name: customer?.full_name,
+            phone_number: customer?.phone_number,
+            address: customer?.address
+        });
+    };
+
+    const handleEditSubmit = async () => {
+        try {
+            const values = await form.validateFields();
+            setCustomer({ ...customer, ...values });
+            message.success("Mijoz ma'lumotlari muvaffaqiyatli o'zgartirildi");
+            setIsEditModalOpen(false);
+        } catch (error) {
+            message.error("Mijoz ma'lumotlarini o'zgartirishda xatolik yuz berdi");
+        }
     };
 
     const handleDelete = async () => {
         Modal.confirm({
-            title: 'Qarzdorni o\'chirishni tasdiqlaysizmi?',
-            content: 'Ushbu qarzdor o\'chirilganda, ma\'lumotlar tiklanmaydi.',
+        
+            content: 'Qarzdorni ochirasmi',
             onOk: async () => {
                 const success = await deleteDebtor(id!);
                 if (success) {
@@ -188,6 +206,42 @@ const CustomerDetail = () => {
         <div>
             <img className="CustomerDetail__img" src="https://media.istockphoto.com/id/1388108025/vector/contactless-customer-payment-to-grocery-shop-cashier.jpg?s=612x612&w=0&k=20&c=xm_MasxuaP4kzcyG1cj7B1zjteWdrhuda8o2Xs2Ze0g=" alt="" />
         </div>
+
+        <Modal
+            title="Mijoz ma'lumotlarini o'zgartirish"
+            open={isEditModalOpen}
+            onOk={handleEditSubmit}
+            onCancel={() => setIsEditModalOpen(false)}
+            okText="Saqlash"
+            cancelText="Bekor qilish"
+        >
+            <Form
+                form={form}
+                layout="vertical"
+            >
+                <Form.Item
+                    name="full_name"
+                    label="F.I.O"
+                    rules={[{ required: true, message: "F.I.O ni kiriting" }]}
+                >
+                    <Input placeholder="F.I.O ni kiriting" />
+                </Form.Item>
+                <Form.Item
+                    name="phone_number"
+                    label="Telefon raqami"
+                    rules={[{ required: true, message: "Telefon raqamini kiriting" }]}
+                >
+                    <Input placeholder="Telefon raqamini kiriting" />
+                </Form.Item>
+                <Form.Item
+                    name="address"
+                    label="Manzil"
+                    rules={[{ required: true, message: "Manzilni kiriting" }]}
+                >
+                    <Input placeholder="Manzilni kiriting" />
+                </Form.Item>
+            </Form>
+        </Modal>
 
         </div>
     );

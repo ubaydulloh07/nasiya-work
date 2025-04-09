@@ -13,6 +13,7 @@ import PersonalInfo from "../pages/PersonalInfo";
 import Help from "../pages/Help";
 import Feedback from "../pages/Feedback";
 import About from "../pages/About";
+import Calendar from "../pages/Calendar";
 
 
 
@@ -32,6 +33,7 @@ function AppRoutes() {
         <Route path="help" element={<Help />} />
         <Route path="feedback" element={<Feedback />} />
         <Route path="about" element={<About />} />
+        <Route path="calendar" element={<Calendar />} />
 
         </Route>
         <Route path="*" element={<NotFound/>}/>
